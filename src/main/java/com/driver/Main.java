@@ -1,28 +1,28 @@
-// Task 1: Create class A
+package com.driver;
+
+// Task 1
 class A {
-    String meth() {
+    public String meth() {
         return "Invoking method from class A";
     }
 }
 
-// Task 2: Create class B which extends A
+// Task 2 & 4
 class B extends A {
-
-    // Task 4: Override method meth
     @Override
-    String meth() {
+    public String meth() {
         return "Method is overridden in Extended class B";
     }
 }
 
-// Task 5: Main class to test everything
+// Task 5
 public class Main {
     public static void main(String[] args) {
 
-        // Task 3: Create object of B
+        // Task 3
         B obj = new B();
 
-        // Calling overridden method (Task 5)
+        // Calling overridden method
         System.out.println(obj.meth());
     }
 }
