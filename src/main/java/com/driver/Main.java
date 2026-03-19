@@ -1,4 +1,3 @@
-
 package com.driver;
 
 public class Main {
@@ -14,6 +13,10 @@ public class Main {
         public String meth() {
             return "Method is overridden in Extended class B";
         }
+
+        public String callSuperMeth() {
+            return super.meth(); // Call the superclass method
+        }
     }
 
     public static void main(String[] args) {
@@ -21,10 +24,9 @@ public class Main {
         B b = new B();
 
         // Call method meth of class A using the object of class B
-//        System.out.println(b.super.meth()); // This will not work in Java. Instead, we can call it directly
-        System.out.println(((A) b).meth()); // This casts b to A to call the superclass method
+        System.out.println(b.callSuperMeth()); // This calls the method from class A
 
         // Task 5: Call the overridden method from the object of class B
-        System.out.println(b.meth());
+        System.out.println(b.meth()); // This calls the overridden method in class B
     }
 }
