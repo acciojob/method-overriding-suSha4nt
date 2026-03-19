@@ -1,28 +1,26 @@
 package com.driver;
 
-// Task 1
-class A {
-    public String meth() {
-        return "Invoking method from class A";
-    }
-}
-
-// Task 2 & 4
-class B extends A {
-    @Override
-    public String meth() {
-        return "Method is overridden in Extended class B";
-    }
-}
-
-// Task 5
 public class Main {
+
+    public static class A {
+        public String meth() {
+            return "Invoking method from class A";
+        }
+    }
+
+    public static class B extends A {
+        @Override
+        public String meth() {
+            return "Method is overridden in Extended class B";
+        }
+    }
+
     public static void main(String[] args) {
 
-        // Task 3
-        B obj = new B();
+        B b = new B();
+        System.out.println(b.meth());
 
-        // Calling overridden method
-        System.out.println(obj.meth());
+        B b2 = new B();
+        System.out.println(b2.meth());
     }
 }
